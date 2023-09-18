@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-         Icon="/images/Mini-Robot-icon.ico"
+        Icon="/images/Mini-Robot-icon.ico"
         Title="Robots inc" Height="360" Width="350">
     <Window.Resources>
         <Style x:Key="baseControl" TargetType="{x:Type Control}">
@@ -46,7 +46,7 @@
         </Style>
     </Window.Resources>
     <Border  BorderBrush="#FF63D6D0" CornerRadius="8" BorderThickness="5">
-    <Grid>
+        <Grid>
             <StackPanel Orientation="Vertical" Margin="0,20,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="ID number:"/>
@@ -59,14 +59,14 @@
                 <StackPanel >
                     <Image Source="pack://application:,,,/images/Mini-Robot.png" Stretch="Uniform" Height="150"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                             VerticalAlignment="Bottom" Margin="0,0,0,15">
                     <Button x:Name="btnLogin" Content="Login" Click="btnLogin_Click" />
-                    <Button x:Name="btnClose" Content="X" Width="30" Background="Transparent" 
+                    <Button x:Name="btnClose" Content="X" Width="30" Background="Transparent"
                             Foreground="Gray" Click="btnClose_Click"/>
                 </StackPanel>
             </StackPanel>
-            
+
         </Grid>
     </Border>
 </Window>

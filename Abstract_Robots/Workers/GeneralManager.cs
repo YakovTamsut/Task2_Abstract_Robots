@@ -8,15 +8,23 @@ namespace Robots_inc
 {
     public class GeneralManager : Worker
     {
-        //1. השלימות את התכונות החסרות
+        protected double MonthlySalary;
+        protected int robotsActive;
 
-        public GeneralManager(string name, string id, DateTime bDate, string pass, double monthlySalary)
-            :base (name,id,bDate,pass)
+        public GeneralManager(string name, string id, DateTime bDate, string pass, double MonthlySalary, int robotsActive)
+            : base(name, id, bDate, pass)
         {
-            //2. השלימו את הקוד החסר לשמירת שכר בתכונה המתאימה
+            this.MonthlySalary = MonthlySalary;
+            this.robotsActive = robotsActive;
         }
-        
-        //3. כתבו פעולה דורסת לחישוב שכר
-        
+
+        public override double CalculateSalery()
+        {
+            if (this.robotsActive > 30)
+            {
+                return MonthlySalary * 1.15;
+            }
+            return MonthlySalary;
+        }
     }
 }

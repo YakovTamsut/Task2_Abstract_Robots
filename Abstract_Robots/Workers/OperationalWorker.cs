@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace Robots_inc
 {
-    public class OperationalWorker //1. כתבו את המחלקה המתאימה להורשה 
+    public class OperationalWorker : Worker
     {
-        //2. השלימות את התכונות החסרות
+        protected int hoursWorked;
+        protected double MpH;
 
-        public OperationalWorker(string name, string id, DateTime bDate, string pass)
+        public OperationalWorker(string name, string id, DateTime bDate, string pass, int hoursWorked, double MpH)
             : base(name, id, bDate, pass)
         {
-            //3. השלימו את הקוד החסר לשמירת שכר בתכונה המתאימה
-            // ?האם נדרשים פרמטרים נוספים
+            this.MpH = MpH;
+            this.hoursWorked = hoursWorked;
         }
 
-        //4. כתבו פעולה דורסת לחישוב שכר
+        public override double CalculateSalery()
+        {
+           return MpH * hoursWorked;
+        }
+
 
     }
 }
