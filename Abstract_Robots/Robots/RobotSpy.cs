@@ -12,7 +12,6 @@ namespace Robots_inc
 		private DateTime creationDate;
 		private double batteryStatus; 
 
-		//1. עדכנו את הפעולה הבונה כך שתקבל פרמטרים בהתאם לתכונות
 		public RobotSpy(string model)
 		{
 			this.model = model;
@@ -20,9 +19,6 @@ namespace Robots_inc
 			batteryStatus = 100;
         }
 		public string GetModel() { 	return this.model; }
-
-        //2. השלימו פעולות מאחזרות עבור התכונות הנוספות
-        //3. הוסיפו פעולה המעדכנת את מצב הסוללה
         public string Model { get { return model; } }
         public DateTime CreationDate { get { return creationDate; } set { creationDate = value; } }
         public double BatteryStatus { get { return batteryStatus; } set { batteryStatus = value; } }
@@ -42,10 +38,9 @@ namespace Robots_inc
 				throw new Exception("Battery too low");
             }
         } 
-		//4. הוסיפו התייחסות למצב סוללה
 		public void ChargeBattery() 
 		{ 
 			batteryStatus = 100;
-		} //5. עדכנו את מצב הסוללה ל-100
+		} 
 	}
 }

@@ -23,12 +23,13 @@ namespace Robots_inc
             //משימה 1
             //השלימו את הבנאי המקבל הפרמטרים הנחוצים ליצירת עובד חדש
         }
+        public string FullName { get { return fullName; }  set { fullName = value; } }
         //משימה 2
         //get כתבו פעולות מאחזרות 
-        public string FullName { get { return fullName; } set { fullName = value; } }
-        public string IdNumber { get { return idNumber; } }
-        public string Password { get { return password; } set { password = value; } }
-        public DateTime BirthDate { get { return birthDate; } }
+        public string GetFullName() {return fullName;}
+        public string GetIdNumber() {return idNumber;}
+        public string GetPassword() {return password;}
+        public DateTime GetBirthDate() {return birthDate;}
 
         //משימה 3
         //רק לתכונות שניתן לשנות - set כתבו פעולות מעדכנות

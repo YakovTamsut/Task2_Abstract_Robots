@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Robots_Inc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,15 @@ namespace Robots_inc
                     break;
             }
 
+        }
+
+        private void ViewWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            workPanel.Children.Clear();
+            activeWorkers.ForEach(worker => {
+                UcWorker ucWorker = new UcWorker(worker);
+                workPanel.Children.Add(ucWorker);
+            });
         }
     }
 }

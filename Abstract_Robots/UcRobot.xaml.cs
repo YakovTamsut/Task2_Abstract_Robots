@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Abstract_Robots
+namespace Robots_Inc
 {
     /// <summary>
     /// Interaction logic for UcRobot.xaml

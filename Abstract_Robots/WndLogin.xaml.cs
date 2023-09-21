@@ -96,9 +96,9 @@ namespace Robots_inc
         {
             foreach (Worker w in workers) 
             {
-                if (tbxID.Text.Equals(w.IdNumber))
+                if (tbxID.Text.Equals(w.GetIdNumber()))
                 {
-                    if (tbxPassword.Password.Equals(w.Password))
+                    if (tbxPassword.Password.Equals(w.GetPassword()))
                     {
                         Worker worker = w;
                         WndMain main = new WndMain(worker, activeMissions, activeRobots, workers);
